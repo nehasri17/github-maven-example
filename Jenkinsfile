@@ -10,6 +10,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'mvn test'
+        sh 'mvn install github-maven-example/example/pom.xml'
       }
     }
     stage('print massage') {
